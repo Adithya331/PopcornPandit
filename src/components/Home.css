@@ -1,0 +1,24 @@
+.movie-container {
+    padding: 1rem;
+    gap:'10rem';
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden; 
+    outline: none;
+  }
+  
+  .movie-container::-webkit-scrollbar {
+    width: 1px;
+    /* display: none; */
+  }
+  
+  .movie-container::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  .movie-container::-webkit-scrollbar-thumb {
+    border-radius: 20rem; /* Optional: rounded corners */
+    /* display: none; */
+    background-color: lightgray; 
+    width: 1rem;
+  }
