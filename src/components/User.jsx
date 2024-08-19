@@ -139,7 +139,7 @@ export default function User() {
                         </Grid>
                     ))
                 ) : (
-                    <Typography>No reviews yet for this movie.</Typography>
+                    <Typography sx={{marginLeft:'4rem'}}>No reviews yet.</Typography>
                 )}
             </Grid>
 
