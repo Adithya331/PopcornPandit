@@ -41,10 +41,10 @@ export default function NavBar() {
     <Box>
         <AppBar component="nav" sx={{backgroundColor:'#D50000'}}>
             <Toolbar>
-            <img src={popcorn} style={{height:'2.5rem', width:'2.5rem'}}  ></img>
+            <img src={popcorn} style={{height:'2.5rem', width:'2.5rem', cursor:'pointer'}} onClick={()=>navigate('/home')}  ></img>
             <Typography
                 variant="h5"
-                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', color:'white', fontWeight:'700' } }}
+                sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block', color:'white', fontWeight:'700' } }}
                 onClick={()=>navigate('/home')}
                 style={{cursor:'pointer'}}
             >
