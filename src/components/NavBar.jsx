@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import {auth} from '../firebase'
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
-import { responsiveFontSizes } from '@mui/material';
+import popcorn from '../assets/popcorn.png'
 
 export default function NavBar() {
   const [userName, SetUserName] = useState(null)
@@ -41,12 +41,14 @@ export default function NavBar() {
     <Box>
         <AppBar component="nav" sx={{backgroundColor:'#D50000'}}>
             <Toolbar>
+            <img src={popcorn} style={{height:'2.5rem', width:'2.5rem'}}  ></img>
             <Typography
                 variant="h5"
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', color:'white', fontWeight:'700' } }}
                 onClick={()=>navigate('/home')}
                 style={{cursor:'pointer'}}
             >
+              
                 PopcornPandit
             </Typography>
             <Box sx={{display:'flex', gap:'1rem', marginRight:'3rem'}}>

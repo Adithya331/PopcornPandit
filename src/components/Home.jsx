@@ -62,19 +62,43 @@ export default function Home() {
         {
           nowPlaying.map((movie, index)=>{
             return(
-              <Card key={index} onClick={()=>{navigate(`/movie/${movie.id}`, {state:movie})}}
-                  sx={{display:'flex', flexDirection:'column', flexShrink:'0',flexGrow:'0', marginRight:'1rem', width:'10rem',
-                  transition: 'transform 0.3s', gap:'1rem',
-                  '&:hover': {
-                    transform: 'scale(1.05)', 
-                  }, }}>
-                  <CardMedia
-                    sx={{ height: 200}}
-                    image={Image_API+movie.poster_path}/>
-                    <Typography variant="subtitle2">
-                    {movie.title}
-                  </Typography>
-            </Card>
+              <Card key={index} 
+                    onClick={() => { navigate(`/movie/${movie.id}`, { state: movie }) }}
+                    sx={{
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      marginRight: '1.5rem', 
+                      flexShrink:'0',flexGrow:'0',
+                      width: '12rem', 
+                      transition: 'transform 0.3s, box-shadow 0.3s', 
+                      gap: '0.5rem', 
+                      borderRadius: '12px', 
+                      overflow: '', 
+                      boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+                      backgroundColor: '#ffffff',
+                      '&:hover': {
+                        transform: 'scale(1.08)', 
+                        boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+                      },
+                    }}>
+                <CardMedia
+                  sx={{ height: 240, backgroundSize: 'cover' }}
+                  image={Image_API + movie.poster_path}
+                />
+                <Typography 
+                  variant="subtitle1" 
+                  sx={{ 
+                    fontWeight: 'bold', 
+                    color: '#333',
+                    padding: '0.5rem 0.5rem',
+                    fontSize: '1rem',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden'
+                  }}>
+                  {movie.title}
+                </Typography>
+              </Card>
             )
           })
         }
@@ -87,19 +111,42 @@ export default function Home() {
           {
             popular.map((movie, index)=>{
               return(
-                <Card key={index} onClick={()=>{navigate(`/movie/${movie.id}`, {state:movie})}}
-                    sx={{display:'flex', flexDirection:'column', flexShrink:'0',flexGrow:'0', marginRight:'1rem', width:'10rem',
-                    transition: 'transform 0.3s', gap:'1rem',
-                    '&:hover': {
-                      transform: 'scale(1.05)', 
-                    }, }}>
-                    <CardMedia
-                      sx={{ height: 200}}
-                      image={Image_API+movie.poster_path}/>
-                      <Typography variant="subtitle2">
-                      {movie.title}
-                    </Typography>
-                    
+                <Card key={index} 
+                    onClick={() => { navigate(`/movie/${movie.id}`, { state: movie }) }}
+                    sx={{
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      marginRight: '1.5rem', 
+                      flexShrink:'0',flexGrow:'0',
+                      width: '12rem', 
+                      transition: 'transform 0.3s, box-shadow 0.3s', 
+                      gap: '0.5rem', 
+                      borderRadius: '12px', 
+                      overflow: '', 
+                      boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+                      backgroundColor: '#ffffff',
+                      '&:hover': {
+                        transform: 'scale(1.08)', 
+                        boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+                      },
+                    }}>
+                <CardMedia
+                  sx={{ height: 240, backgroundSize: 'cover' }}
+                  image={Image_API + movie.poster_path}
+                />
+                <Typography 
+                  variant="subtitle1" 
+                  sx={{ 
+                    fontWeight: 'bold', 
+                    color: '#333',
+                    padding: '0.5rem 0.5rem',
+                    fontSize: '1rem',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden'
+                  }}>
+                  {movie.title}
+                </Typography>
               </Card>
               )
             })
@@ -113,20 +160,42 @@ export default function Home() {
           {
             topRated.map((movie, index)=>{
               return(
-                <Card key={index} onClick={()=>{navigate(`/movie/${movie.id}`, {state:movie})}}
-                    sx={{display:'flex', flexDirection:'column', flexShrink:'0',flexGrow:'0', marginRight:'1rem', width:'10rem',
-                    transition: 'transform 0.3s', gap:'1rem',
-                    '&:hover': {
-                      transform: 'scale(1.05)', 
-                    }, }}
-                    >
-                    <CardMedia
-                      sx={{ height: 200}}
-                      image={Image_API+movie.poster_path}/>
-                      <Typography variant="subtitle2">
-                      {movie.title}
-                    </Typography>
-                    
+                <Card key={index} 
+                    onClick={() => { navigate(`/movie/${movie.id}`, { state: movie }) }}
+                    sx={{
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      marginRight: '1.5rem', 
+                      flexShrink:'0',flexGrow:'0',
+                      width: '12rem', 
+                      transition: 'transform 0.3s, box-shadow 0.3s', 
+                      gap: '0.5rem', 
+                      borderRadius: '12px', 
+                      overflow: '', 
+                      boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+                      backgroundColor: '#ffffff',
+                      '&:hover': {
+                        transform: 'scale(1.08)', 
+                        boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+                      },
+                    }}>
+                <CardMedia
+                  sx={{ height: 240, backgroundSize: 'cover' }}
+                  image={Image_API + movie.poster_path}
+                />
+                <Typography 
+                  variant="subtitle1" 
+                  sx={{ 
+                    fontWeight: 'bold', 
+                    color: '#333',
+                    padding: '0.5rem 0.5rem',
+                    fontSize: '1rem',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden'
+                  }}>
+                  {movie.title}
+                </Typography>
               </Card>
               )
             })
@@ -140,20 +209,58 @@ export default function Home() {
           {
             upComing.map((movie, index)=>{
               return(
-                <Card key={index} onClick={()=>{navigate(`/movie/${movie.id}`, {state:movie})}}
-                    sx={{display:'flex', flexDirection:'column', flexShrink:'0',flexGrow:'0', marginRight:'1rem', width:'10rem',
-                    transition: 'transform 0.3s', gap:'1rem',
-                    '&:hover': {
-                      transform: 'scale(1.05)', 
-                    }, }}>
-                    <CardMedia
-                      sx={{ height: 200}}
-                      image={Image_API+movie.poster_path}/>
-                      <Typography variant="subtitle2">
-                      {movie.title}
-                    </Typography>
+              //   <Card key={index} onClick={()=>{navigate(`/movie/${movie.id}`, {state:movie})}}
+              //       sx={{display:'flex', flexDirection:'column', flexShrink:'0',flexGrow:'0', marginRight:'1rem', width:'10rem',
+              //       transition: 'transform 0.3s', gap:'1rem',
+              //       '&:hover': {
+              //         transform: 'scale(1.05)', 
+              //       }, }}>
+              //       <CardMedia
+              //         sx={{ height: 200}}
+              //         image={Image_API+movie.poster_path}/>
+              //         <Typography variant="subtitle2">
+              //         {movie.title}
+              //       </Typography>
                     
+              // </Card>
+              <Card key={index} 
+                    onClick={() => { navigate(`/movie/${movie.id}`, { state: movie }) }}
+                    sx={{
+                      display: 'flex', 
+                      flexDirection: 'column', 
+                      marginRight: '1.5rem', 
+                      flexShrink:'0',flexGrow:'0',
+                      width: '12rem', 
+                      transition: 'transform 0.3s, box-shadow 0.3s', 
+                      gap: '0.5rem', 
+                      borderRadius: '12px', 
+                      overflow: '', 
+                      boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+                      backgroundColor: '#ffffff',
+                      '&:hover': {
+                        transform: 'scale(1.08)', 
+                        boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+                      },
+                    }}>
+                <CardMedia
+                  sx={{ height: 240, backgroundSize: 'cover' }}
+                  image={Image_API + movie.poster_path}
+                />
+                <Typography 
+                  variant="subtitle1" 
+                  sx={{ 
+                    fontWeight: 'bold', 
+                    color: '#333',
+                    padding: '0.5rem 0.5rem',
+                    fontSize: '1rem',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden'
+                  }}>
+                  {movie.title}
+                </Typography>
               </Card>
+
               )
             })
           }

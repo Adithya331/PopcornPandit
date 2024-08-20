@@ -187,7 +187,7 @@ export default function Movie() {
                                 <Typography
                                     variant="body2"
                                     color="text.secondary"
-                                    sx={{ marginBottom: 'auto', marginTop: '0.5rem' }}
+                                    sx={{ marginBottom: 'auto', marginTop: '0.5rem', maxHeight:'4rem', overflow:'hidden' }}
                                 >
                                     {rev.review.content}
                                 </Typography>
